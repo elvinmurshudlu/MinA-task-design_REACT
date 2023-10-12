@@ -17,6 +17,7 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import CardsPage from "./pages/CardsPage/CardsPage";
 import { NewCard } from './pages/NewCard/NewCard';
 import { PrimeReactProvider } from 'primereact/api';
+import { Detail } from './pages/CardDetail/Detail';
 
 //theme
 
@@ -32,6 +33,10 @@ const routes = createBrowserRouter([{
         {
           path:'/new-card',
           element:<NewCard></NewCard>
+        },
+        {
+          path:"cards/:id",
+          element:<Detail></Detail>
         }
     ]
 }])

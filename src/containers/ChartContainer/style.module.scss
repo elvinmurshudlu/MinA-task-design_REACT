@@ -1,0 +1,14 @@
+@import "../../styles/colors";
+@import "../../styles/mixins";
+
+
+.graph-container{
+  height: 100%;
+  @include addBorder;
+  background-color: var(--form-bg);
+  padding: 8px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}

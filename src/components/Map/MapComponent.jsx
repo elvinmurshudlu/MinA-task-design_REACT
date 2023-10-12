@@ -2,14 +2,12 @@ import { useEffect, useRef } from "react";
 import style from "./style.module.css"
 import * as mapboxgl from 'mapbox-gl';
 
-export function Map(){
+export function MapComponent(){
 
     const mapEl = useRef()
 
     const   token = "pk.eyJ1IjoiZWx2aW5tdXJzaHVkbHUiLCJhIjoiY2xua2xyMmV6MXZqajJrdzVsNHNyZ2I0NCJ9.Zdc_PFFpzqDzum8kHTu7uA"
     mapboxgl.accessToken = token
-
-
 
     useEffect(()=>{
 
@@ -24,7 +22,7 @@ export function Map(){
           map.on('load', () => {
             map.addSource('route', {
               'type': 'geojson',
-              'data': 'istanbul-nufus-geo.geojson'
+              'data': '/istanbul-nufus-geo.geojson'
             });
     
             const colorStops = [

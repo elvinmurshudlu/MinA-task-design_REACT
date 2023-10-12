@@ -1,6 +1,6 @@
 import { Form } from "../../components/Form/Form"
 import style from "./style.module.css"
-import { Map } from "../../components/Map/Map"
+import { MapComponent } from "../../components/Map/MapComponent"
 
 export function NewCard(){
     return (
@@ -10,7 +10,7 @@ export function NewCard(){
                     <Form></Form>
                 </div>
                 <div className="col-12 col-md-9 p-3 order-0 order-md-1">
-                    <Map></Map>
+                    <MapComponent></MapComponent>
                 </div>
 
 </div>

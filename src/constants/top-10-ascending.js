@@ -1,5 +1,5 @@
 export const top10Ascending = {
-  "title":"Top 10 Descending Results",
+  "title":"Top 10 Ascending Results",
   "type":"chart-bar",
   "data":[
     {"label":"Besiktas","vote":150},

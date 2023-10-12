@@ -1,0 +1,19 @@
+@import './styles//mixins';
+
+#container{
+
+    background-color: var(--body-bg-color);
+  
+    .router-container{
+      width: 100%;
+      height: 100vh;
+      padding-top: 57px;
+      padding-bottom: 51px;
+      @include mobile{
+        padding-bottom: 0;
+      }
+  
+    }
+  
+  }
+  

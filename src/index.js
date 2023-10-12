@@ -1,13 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import CardsPage from "./pages/CardsPage/CardsPage";
+
+
+
+const routes = createBrowserRouter([{
+    path:'/',
+    element:<App></App>,
+    children:[
+        {
+            path:'/',
+            element:<CardsPage></CardsPage>
+        }
+    ]
+}])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={routes}>
+    </RouterProvider>
   </React.StrictMode>
 );
 

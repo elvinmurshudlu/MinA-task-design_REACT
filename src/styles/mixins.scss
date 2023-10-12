@@ -1,0 +1,34 @@
+$large-device-width: 1199px;
+$medium-device-width: 991px;
+$small-device-width: 767px;
+$extra-small-device-width: 575px;
+
+@mixin desktop {
+  @media (max-width: #{$large-device-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$medium-device-width}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$small-device-width}) {
+    @content;
+  }
+}
+
+@mixin extra-small-mobile {
+  @media (max-width: #{$extra-small-device-width}) {
+    @content;
+  }
+}
+
+
+@mixin addBorder{
+  border-radius: 5px;
+
+}

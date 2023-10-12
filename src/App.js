@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import { useState } from 'react';
 
+
 function App() {
 
   const [themeIsDark,setTheme] = useState(()=>{
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <>
+
      <div id="container" style={{minHeight:'100vh'}} className={themeIsDark ? "dark-mode":''} >
      <Header changeTheme={changeTheme}></Header>
           <div class="router-container">

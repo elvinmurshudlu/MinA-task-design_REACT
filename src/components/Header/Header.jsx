@@ -31,7 +31,6 @@ export default function Header({changeTheme}){
                                     ))
                                 }
 
-                                                {/* <li *ngFor="let item of menu"><a href="" [routerLink]="item.path">{{item.label}}</a></li> */}
 
                         </ul>
 

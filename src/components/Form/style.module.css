@@ -1,0 +1,138 @@
+:root {
+  --nav-bg-color: #d5d5d5;
+  --body-bg-color: #b0b0b0;
+  --footer-bg-color: #9d9d9d;
+  --font-color:black;
+  --card-font-color:white;
+  --border-color:#09c9c9;
+  --card-text-bg:rgba(0, 0, 0, 0.42);
+  --add-card-border:#63ba09;
+  --choose-color-btn:#ffd24d;
+  --add-to-list-bg:#dddddd;
+  --font-color-btn:rgba(90,84,69,255);
+  --form-btn-color:#47bde5;
+  --form-bg: #858585;
+}
+
+.dark-mode {
+  --card-font-color:black !important;
+  --nav-bg-color:#4e4e4e !important;
+  --body-bg-color:#333333 !important;
+  --footer-bg-color:#232323 !important;
+  --font-color:#e0e0e0 !important;
+  --border-color:#09c9c9 !important;
+  --card-text-bg:rgba(0, 0, 0, 0.42) !important;
+  --add-card-border:#63ba09 !important;
+  --choose-color-btn: #ffd24d !important;
+  --add-to-list-bg:#dddddd !important;
+  --font-color-btn:rgba(90,84,69,255) !important;
+  --form-btn-color:#47bde5 !important;
+  --form-bg:#282828 !important;
+}
+
+.create-container {
+  height: 100%;
+  background-color: var(--form-bg);
+  border-radius: 5px;
+}
+.create-container .form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  height: 100%;
+}
+.create-container .form h6 {
+  font-weight: 400;
+}
+.create-container .form .label {
+  row-gap: 5px;
+  width: 100%;
+  font-size: 13px;
+}
+.create-container .form .label .input, .create-container .form .label .textarea, .create-container .form .label .select {
+  padding: 2px 4px;
+  width: 100%;
+  background-color: var(--nav-bg-color);
+  border: none;
+  border-radius: 3px;
+}
+.create-container .form .label .textarea {
+  height: 70px;
+  resize: none;
+}
+.create-container .form .label .answer .input {
+  width: 55%;
+}
+.create-container .form .label .answer .input::-moz-placeholder {
+  color: var(--font-color);
+}
+.create-container .form .label .answer .input::placeholder {
+  color: var(--font-color);
+}
+.create-container .form .label .answer div {
+  padding-left: 4px;
+  width: 45%;
+}
+.create-container .form .label .answer div button {
+  width: 50%;
+  font-size: 10px;
+  padding: 3px 2px;
+  height: 100%;
+  color: var(--font-color-btn);
+  border-radius: 5px;
+}
+.create-container .form .label .answer div button:nth-child(1) {
+  background-color: var(--choose-color-btn);
+}
+.create-container .form .label .answer div button:nth-child(2) {
+  background-color: var(--add-to-list-bg);
+}
+
+.error .input, .error .textarea, .error .select {
+  border: 1px solid red !important;
+}
+.error .color-container {
+  border: 1px solid red !important;
+}
+
+.select-container {
+  width: 100%;
+}
+
+:host ::ng-deep .select-button {
+  width: 100%;
+  background-color: var(--nav-bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 7px;
+  border: none;
+  border-radius: 3px;
+}
+
+:host ::ng-deep .dropdown-menu {
+  width: 100%;
+  background-color: var(--nav-bg-color);
+  font-size: 13px;
+}
+
+.color-container {
+  max-height: 170px;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--nav-bg-color);
+}
+
+.btn-submit-container {
+  padding-top: 15px;
+}
+.btn-submit-container .btn-submit {
+  color: var(--form-btn-color);
+  background-color: var(--footer-bg-color);
+  border: none;
+  padding: 6px 20px;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 3px;
+}/*# sourceMappingURL=style.module.css.map */

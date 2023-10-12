@@ -12,7 +12,7 @@ import { useState } from "react";
 
 
 
-export default function Header(){
+export default function Header({changeTheme}){
 
     const [isOpen ,setIsOpen] = useState(false)
 
@@ -40,7 +40,7 @@ export default function Header(){
                             <div className={style['controls']}>
                                 <span className="icon-btn"><BsBellFill></BsBellFill></span>
                                 <span className="icon-btn"><BsFillChatLeftTextFill></BsFillChatLeftTextFill></span>
-                                <span  className="icon-btn"><BsFillMoonFill></BsFillMoonFill></span>
+                                <span onClick={changeTheme} className="icon-btn"><BsFillMoonFill></BsFillMoonFill></span>
                             </div>
 
                             <div className={style["profile"]}>
@@ -69,7 +69,7 @@ export default function Header(){
                                         <div className={style['controls']}>
                                             <span className="icon-btn"><BsBellFill></BsBellFill></span>
                                             <span className="icon-btn"><BsFillChatLeftTextFill></BsFillChatLeftTextFill></span>
-                                            <span  className="icon-btn"><BsFillMoonFill></BsFillMoonFill></span>
+                                            <span onClick={changeTheme} className="icon-btn"><BsFillMoonFill></BsFillMoonFill></span>
                                         </div>
 
                                         <div className={style["profile"]}>

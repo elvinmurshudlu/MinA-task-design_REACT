@@ -3,6 +3,7 @@ import style from './style.module.css'
 import {BiDotsHorizontal} from "react-icons/bi"
 import {cards} from "../../constants/cards"
 import {Card} from "../../components/Card/Card"
+import { AddCard } from '../../components/AddCard/AddCard'
 
 export default function  CardsPage(){
 
@@ -25,7 +26,7 @@ export default function  CardsPage(){
         <div ref={container} onScroll={onScroll} className={style["main-container"]} >
                 <div className={style["card-item"]}>
 
-                    <p>Add card olacaq burada</p>
+                    <AddCard></AddCard>
                 </div>
                 
                 {

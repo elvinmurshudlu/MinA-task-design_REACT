@@ -71,14 +71,9 @@ export function MapComponent(){
 
     return (<>
 
-<div className={style["map-container"]} >
-
-        <div className={style["map"]} ref={mapEl}>
-
-        </div>
-
-
-</div>
+          <div className={style["map-container"]} >
+                  <div className={style["map"]} ref={mapEl}></div>
+          </div>
 
     
     </>)

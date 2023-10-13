@@ -1,4 +1,5 @@
 @import './styles/colors';
+@import url(https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css);
 
 body *{
   padding: 0;

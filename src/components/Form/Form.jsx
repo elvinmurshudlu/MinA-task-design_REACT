@@ -3,15 +3,18 @@ import {form_settings} from '../../constants/forms'
 import { useState,useRef } from 'react'
 import { ColorPicker } from 'primereact/colorpicker';
 import { OverlayPanel } from 'primereact/overlaypanel';
-import { Button } from 'primereact/button';
+import { Dropdown } from 'primereact/dropdown';
 import { Answer } from '../Answers/Answers';
+import { SelectComp } from '../SelectComponent/SelectComponent';
         
 export function Form(){
   const op = useRef(null);
     const [color,setColor] = useState(null)
+
     const [answers,setAnswers] = useState([])
     const [form,setForm] = useState({})
 
+    const [isSubmitted,setIsSubmitted] = useState(false)
 
     function handleWrite(event){
       const value = event.target.value
@@ -21,11 +24,30 @@ export function Form(){
 
     }
 
-    function sendData(e){
-      e.preventDefault()
-      console.log(form);
+    function addColor(e){
+        e.preventDefault()
+
+        if(!color || !form['answers']){
+          return
+        }
+        
+        setAnswers(ans=>([{color:color,answer:form['answers']},...ans]))
+        setForm(form=>({...form,['answers']:''}))
+        setColor(null)
+
     }
 
+
+    function sendData(e){
+      e.preventDefault()
+      setIsSubmitted(true)
+    }
+
+
+    function onSelectOption(field,value){
+      setForm(form=>({...form,[field]:value}))
+
+    }
 
     return (
         <>
@@ -34,7 +56,6 @@ export function Form(){
 
 <form className={style['form']} >
   <h6>{form_settings.title}</h6>
-        {/* <Button type="button" icon="pi pi-image" label="Image" onClick={(e) => op.current.toggle(e)} /> */}
             <OverlayPanel ref={op}>
                   <ColorPicker value={color} onChange={(e) => setColor(e.value)} inline />
             </OverlayPanel>
@@ -42,8 +63,8 @@ export function Form(){
 
           {
             form_settings.fields.map((field,index)=>(
-              <label key={index} className={style['label'] + (!form[field.field] ? ' error' : '')}>
-                {field.label}
+              <label key={index} className={style['label'] + (!form[field.field] && isSubmitted ? (' ' + style['error']) : '')}>
+                <div>{field.label}</div>
                     
                 {
                   field.type === 'input-text' && <input onChange={handleWrite} value={form[field.field] || ''} className={style['input']} type="text" id={field.field}/>
@@ -52,7 +73,7 @@ export function Form(){
                   field.type === 'textarea' && <textarea onChange={handleWrite} value={form[field.field] || ''} className={style['textarea']}  id={field.field}></textarea>
                 }
                 {
-                  field.type === 'select' && <input onChange={handleWrite} value={form[field.field] || ''} className={style['input']} type="text" placeholder='Select' id={field.field}/>
+                  field.type === 'select' && <SelectComp isSubmit={isSubmitted} data={field} onSelect={onSelectOption}></SelectComp>
                 }
                 
                 {
@@ -67,14 +88,11 @@ export function Form(){
                         }}>
                           Choose color
                         </button>
-                        <button >Add to list</button>
+                        <button onClick={addColor}>Add to list</button>
                       </div>
                     </div>
 
                     <Answer data={answers}></Answer>
-                  
-                  
-                  
                   </>
                   
                   
@@ -88,17 +106,12 @@ export function Form(){
 <div className={style['btn-submit-container'] + ' d-flex justify-content-end'} >
         <button className={style['btn-submit']} onClick={sendData}>Save</button>
       </div>
-
-
-
 </form>
 
 
+
+
 </div>
-
-
-
-
         </>
     )
 }

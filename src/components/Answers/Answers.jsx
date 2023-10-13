@@ -4,11 +4,6 @@ import {BsFillTrashFill , BsFillPencilFill} from 'react-icons/bs'
 
 
 export function Answer({data}){
-
-
-    
-
-
     return (
         <>
 
@@ -27,7 +22,7 @@ export function Answer({data}){
 
 {
     data && data.map((row,index)=>(
-        <tr key={index} style={{borderLeftStyle:'solid',borderLeftWidth:'1px',borderColor:row.color}}>
+        <tr key={index} style={{borderLeftStyle:'solid',borderLeftWidth:'1px',borderLeftColor:"#"+row.color}}>
             <td style={{color:row.color}}>{row.color}</td>
       <td>{row.answer}</td>
       <td>

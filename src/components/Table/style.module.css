@@ -1,55 +1,41 @@
-:root {
-  --nav-bg-color: #d5d5d5;
-  --body-bg-color: #b0b0b0;
-  --footer-bg-color: #9d9d9d;
-  --font-color:black;
-  --card-font-color:white;
-  --border-color:#09c9c9;
-  --card-text-bg:rgba(0, 0, 0, 0.42);
-  --add-card-border:#63ba09;
-  --choose-color-btn:#ffd24d;
-  --add-to-list-bg:#dddddd;
-  --font-color-btn:rgba(90,84,69,255);
-  --form-btn-color:#47bde5;
-  --form-bg: #858585;
+.tabulator {
+  height: 400px !important;
+  border: none !important;
+  color: var(--font-color) !important;
+  background-color: var(--body-bg-color) !important;
 }
 
-.dark-mode {
-  --card-font-color:black !important;
-  --nav-bg-color:#4e4e4e !important;
-  --body-bg-color:#333333 !important;
-  --footer-bg-color:#232323 !important;
-  --font-color:#e0e0e0 !important;
-  --border-color:#09c9c9 !important;
-  --card-text-bg:rgba(0, 0, 0, 0.42) !important;
-  --add-card-border:#63ba09 !important;
-  --choose-color-btn: #ffd24d !important;
-  --add-to-list-bg:#dddddd !important;
-  --font-color-btn:rgba(90,84,69,255) !important;
-  --form-btn-color:#47bde5 !important;
-  --form-bg:#282828 !important;
+.tabulator-col {
+  background-color: var(--nav-bg-color) !important;
+  border: none !important;
 }
 
-.table-row {
-  font-size: 12px;
-  line-height: 22px;
+.tabulator-headers {
+  width: 100% !important;
 }
-.table-row .td {
+
+.tabulator-header {
+  border: none !important;
+}
+
+.tabulator-header-contents {
+  background-color: var(--nav-bg-color) !important;
+}
+
+.tabulator-row {
   background-color: var(--footer-bg-color) !important;
+  border: none !important;
+}
+.tabulator-row:hover {
+  background-color: var(--footer-bg-color);
 }
 
-.table-header {
-  background-color: var(--nav-bg-color);
-  padding: 5px;
+.tabulator-cell {
+  border: none !important;
+  font-size: 12px !important;
+  font-weight: 100;
 }
 
-.table-body {
-  max-height: 100px;
-  overflow-y: scroll;
-}
-
-.answers-container {
-  display: flex;
-  color: var(--font-color);
-  background-color: var(--body-bg-color);
+::-webkit-scrollbar {
+  display: none;
 }/*# sourceMappingURL=style.module.css.map */

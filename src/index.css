@@ -1,5 +1,5 @@
 @import './styles/colors';
-
+@import  "tabulator-tables";
 
 body *{
   padding: 0;
@@ -32,3 +32,46 @@ body *{
 ::-webkit-scrollbar-thumb:hover {
  background: #555;
 }
+
+
+.tabulator {
+  height: 400px !important;
+  border: none !important;
+  color: var(--font-color) !important;
+  background-color: var(--body-bg-color) !important;
+}
+
+.tabulator-col {
+  background-color: var(--nav-bg-color) !important;
+  border: none !important;
+}
+
+.tabulator-headers {
+  width: 100% !important;
+}
+
+.tabulator-header {
+  border: none !important;
+}
+
+.tabulator-header-contents {
+  background-color: var(--nav-bg-color) !important;
+}
+
+.tabulator-row {
+  background-color: var(--footer-bg-color) !important;
+  border: none !important;
+}
+.tabulator-row:hover {
+  background-color: var(--footer-bg-color);
+}
+
+.tabulator-cell {
+  border: none !important;
+  font-size: 12px !important;
+  font-weight: 100;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}/*# sourceMappingURL=style.module.css.map */

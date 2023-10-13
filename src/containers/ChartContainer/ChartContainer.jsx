@@ -12,7 +12,9 @@ export function ChartContainer(){
             <ChartComp data={top10Desc}></ChartComp>
             <ChartComp data={top10Ascending}></ChartComp>
             <ChartComp data={allPie}></ChartComp>
+            <div >
             <TableComponent></TableComponent>
+            </div>
 
         </div>
         </>

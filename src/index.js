@@ -13,7 +13,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 
 import App from './App';
-import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import {createBrowserRouter, Navigate, RouterProvider} from 'react-router-dom'
 import CardsPage from "./pages/CardsPage/CardsPage";
 import { NewCard } from './pages/NewCard/NewCard';
 import { PrimeReactProvider } from 'primereact/api';
@@ -23,7 +23,7 @@ import { Detail } from './pages/CardDetail/Detail';
 
 
 const routes = createBrowserRouter([{
-    path:'/',
+    path:'',
     element:<App></App>,
     children:[
         {
@@ -39,7 +39,11 @@ const routes = createBrowserRouter([{
           element:<Detail></Detail>
         }
     ]
-}])
+},{
+  path:'*',
+  element:<Navigate to={'/'} replace></Navigate>
+}
+])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -1,0 +1,32 @@
+@import "../../styles/colors";
+
+.table-row{
+  font-size: 12px;
+  line-height: 22px;
+
+  .td{
+  background-color:var(--footer-bg-color) !important;
+
+  }
+}
+
+.table-header{
+  background-color: var(--nav-bg-color);
+  // position: sticky;
+  padding: 5px;
+  
+}
+
+.table-body{
+  max-height: 100px;
+  overflow-y: scroll ;
+}
+
+
+.answers-container{
+  color:var(--font-color);
+  background-color:var(--body-bg-color);
+  // position: relative;
+  height: 300px;
+  // overflow-y:scroll ;
+}

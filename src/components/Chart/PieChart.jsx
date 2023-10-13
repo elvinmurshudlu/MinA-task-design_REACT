@@ -6,16 +6,6 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 export function PieChart({data}){
     const [chartDetails,setChartDetails] = useState({labels:[],data:[]})
-
-
-     const options = {
-        responsive: true,
-        plugins: {
-          legend: false
-          
-        },
-      };
-
       const chartData = {
         labels: chartDetails.labels,
         datasets: [
@@ -55,7 +45,6 @@ export function PieChart({data}){
             datas.push(m.vote)
           })
 
-          console.log(datas,labels);
 
           setChartDetails({labels:labels,data:datas})
 

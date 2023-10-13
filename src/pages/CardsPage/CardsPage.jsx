@@ -7,7 +7,7 @@ import { AddCard } from '../../components/AddCard/AddCard'
 
 export default function  CardsPage(){
 
-    const [elements,SetElements] = useState(20)
+    const [elements,SetElements] = useState(19)
 
     const container = useRef()
 

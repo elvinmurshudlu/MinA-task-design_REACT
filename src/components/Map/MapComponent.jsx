@@ -11,53 +11,60 @@ export function MapComponent(){
 
     useEffect(()=>{
 
+      try {
         const  map = new mapboxgl.Map({
-            container: mapEl.current,
-            style: `mapbox://styles/mapbox/dark-v11` ,
-    
-            center: [28.9784, 41.0082],
-            zoom: 8.5
+          container: mapEl.current,
+          style: `mapbox://styles/mapbox/dark-v11` ,
+  
+          center: [28.9784, 41.0082],
+          zoom: 8.5
+        });
+  
+        map.on('load', () => {
+          map.addSource('route', {
+            'type': 'geojson',
+            'data': '/istanbul-nufus-geo.geojson'
           });
-    
-          map.on('load', () => {
-            map.addSource('route', {
-              'type': 'geojson',
-              'data': '/istanbul-nufus-geo.geojson'
-            });
-    
-            const colorStops = [
-              [0, '#dede08'],
-              [4000, '#deb308'],
-              [10000, '#e0350a'],
-    
-            ];
-            map.addLayer({
-              'id': 'route',
-              'type': 'fill',
-              'source': 'route',
-              paint: {
-                'fill-color': {
-                  property: 'maas',
-                  stops: colorStops
-                },
-                'fill-opacity': 0.9
-              }
-            });
-            map.addLayer({
-              id: 'labels',
-              type: 'symbol',
-              source: 'route',
-              layout: {
-                'text-field': ['get', 'ILCEAD'],
-                'text-size': 13,
-                'text-anchor': 'center',
+  
+          const colorStops = [
+            [0, '#dede08'],
+            [4000, '#deb308'],
+            [10000, '#e0350a'],
+  
+          ];
+          map.addLayer({
+            'id': 'route',
+            'type': 'fill',
+            'source': 'route',
+            paint: {
+              'fill-color': {
+                property: 'maas',
+                stops: colorStops
               },
-              paint: {
-                'text-color': 'white',
-              }
-            });
-    
+              'fill-opacity': 0.9
+            }
           });
+          map.addLayer({
+            id: 'labels',
+            type: 'symbol',
+            source: 'route',
+            layout: {
+              'text-field': ['get', 'ILCEAD'],
+              'text-size': 13,
+              'text-anchor': 'center',
+            },
+            paint: {
+              'text-color': 'white',
+            }
+          });
+  
+        });
+
+    } catch (error) {
+        console.error("Map initialization error:", error);
+    }
+
+        
 
     },[])
 

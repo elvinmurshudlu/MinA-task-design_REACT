@@ -3,9 +3,9 @@ import {form_settings} from '../../constants/forms'
 import { useState,useRef } from 'react'
 import { ColorPicker } from 'primereact/colorpicker';
 import { OverlayPanel } from 'primereact/overlaypanel';
-import { Dropdown } from 'primereact/dropdown';
 import { Answer } from '../Answers/Answers';
 import { SelectComp } from '../SelectComponent/SelectComponent';
+import axios from 'axios';
         
 export function Form(){
   const op = useRef(null);
@@ -45,6 +45,15 @@ export function Form(){
 
       if(Object.keys(form).length<5 || answers.length===0) return
 
+      try{
+        await axios.post(form_settings.enpoint,
+          {...form,['answers']:answers}
+        )
+
+      }catch(e){
+        console.log(e)
+
+      }
 
 
 

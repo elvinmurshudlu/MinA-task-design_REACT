@@ -49,7 +49,7 @@
 }
 
 .answers-container {
+  display: flex;
   color: var(--font-color);
   background-color: var(--body-bg-color);
-  height: 300px;
 }/*# sourceMappingURL=style.module.css.map */

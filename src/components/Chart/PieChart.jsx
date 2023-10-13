@@ -52,7 +52,7 @@ export function PieChart({data}){
 
     return (
         <>
-                <Pie data={chartData} />;
+                <Pie data={chartData} />
         </>
     )
 }

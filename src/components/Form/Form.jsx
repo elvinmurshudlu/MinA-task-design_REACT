@@ -20,6 +20,7 @@ export function Form(){
       const value = event.target.value
       const id = event.target.id
 
+      
       setForm(form=>({...form,[id]:value}))
 
     }
@@ -38,15 +39,20 @@ export function Form(){
     }
 
 
-    function sendData(e){
+    async function sendData(e){
       e.preventDefault()
       setIsSubmitted(true)
+
+      if(Object.keys(form).length<5 || answers.length===0) return
+
+
+
+
     }
 
 
     function onSelectOption(field,value){
       setForm(form=>({...form,[field]:value}))
-
     }
 
     return (

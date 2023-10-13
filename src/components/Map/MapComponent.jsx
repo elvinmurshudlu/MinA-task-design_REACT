@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import style from "./style.module.css"
-import * as mapboxgl from 'mapbox-gl';
+import mapboxgl from 'mapbox-gl';
 
 export function MapComponent(){
 

@@ -1,6 +1,7 @@
 @import './styles/colors';
 @import  "tabulator-tables";
 @import './components/SelectComponent/style.css';
+@import './components/Card/style.module.css';
 
 body *{
   padding: 0;

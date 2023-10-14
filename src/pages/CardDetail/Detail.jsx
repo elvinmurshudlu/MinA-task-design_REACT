@@ -1,4 +1,4 @@
-import style from './style.module.css'
+import   './style.css'
 import {MapComponent} from "../../components/Map/MapComponent"
 import { ChartContainer } from '../../containers/ChartContainer/ChartContainer'
 

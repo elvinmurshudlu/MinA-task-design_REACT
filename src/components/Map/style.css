@@ -1,0 +1,48 @@
+:root {
+  --nav-bg-color: #d5d5d5;
+  --body-bg-color: #b0b0b0;
+  --footer-bg-color: #9d9d9d;
+  --font-color:black;
+  --card-font-color:white;
+  --border-color:#09c9c9;
+  --card-text-bg:rgba(0, 0, 0, 0.42);
+  --add-card-border:#63ba09;
+  --choose-color-btn:#ffd24d;
+  --add-to-list-bg:#dddddd;
+  --font-color-btn:rgba(90,84,69,255);
+  --form-btn-color:#47bde5;
+  --form-bg: #858585;
+}
+
+.dark-mode {
+  --card-font-color:black !important;
+  --nav-bg-color:#4e4e4e !important;
+  --body-bg-color:#333333 !important;
+  --footer-bg-color:#232323 !important;
+  --font-color:#e0e0e0 !important;
+  --border-color:#09c9c9 !important;
+  --card-text-bg:rgba(0, 0, 0, 0.42) !important;
+  --add-card-border:#63ba09 !important;
+  --choose-color-btn: #ffd24d !important;
+  --add-to-list-bg:#dddddd !important;
+  --font-color-btn:rgba(90,84,69,255) !important;
+  --form-btn-color:#47bde5 !important;
+  --form-bg:#282828 !important;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: var(--footer-bg-color);
+}
+@media (max-width: 767px) {
+  .map-container {
+    height: 400px;
+  }
+}
+.map-container .map {
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=style.css.map */

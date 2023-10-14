@@ -1,5 +1,6 @@
 import { useState } from "react"
 import {BsCaretDownFill} from 'react-icons/bs'
+import './style.css'
 
 export function SelectComp({initialText='Option List',data,onSelect,isSubmit}){
 

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import style from './style.module.css'
+import './style.css'
 import {BsPlusLg} from 'react-icons/bs'
 
 export function AddCard(){

@@ -2,7 +2,7 @@ import {listOfResult} from "../../constants/list-of-results"
 import 'react-tabulator/lib/styles.css'; // required styles
 import 'react-tabulator/lib/css/tabulator.min.css'; // theme
 import { ReactTabulator } from 'react-tabulator';
-
+import './style.css'
 
 export function TableComponent(){
 

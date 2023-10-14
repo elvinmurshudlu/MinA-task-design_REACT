@@ -5,7 +5,9 @@ import { OverlayPanel } from 'primereact/overlaypanel';
 import { Answer } from '../Answers/Answers';
 import { SelectComp } from '../SelectComponent/SelectComponent';
 import axios from 'axios';
-        
+import './style.css'
+
+
 export function Form(){
   const op = useRef(null);
     const [color,setColor] = useState(null)

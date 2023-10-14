@@ -30,16 +30,20 @@
   --form-bg:#282828 !important;
 }
 
-.add-card {
-  max-height: 200px;
-  height: 100%;
-  border-radius: 7px;
-  border: 1px solid var(--add-card-border);
-  background-color: var(--nav-bg-color);
-  cursor: pointer;
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 20px;
+  color: var(--font-color);
+  background-color: var(--footer-bg-color);
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
 }
-@media (max-width: 575px) {
-  .add-card {
-    height: 200px;
+@media (max-width: 767px) {
+  .footer {
+    position: static;
   }
-}/*# sourceMappingURL=style.module.css.map */
+}/*# sourceMappingURL=style.css.map */

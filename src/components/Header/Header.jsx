@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-
+import './style.css'
 import {settings} from "../../constants/settings"
 import {menu} from "../../constants/menu"
 import {user} from '../../constants/user'

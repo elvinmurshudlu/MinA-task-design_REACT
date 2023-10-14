@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import style from './style.module.css'
+import  './style.css'
 import {BsFillTrashFill , BsFillPencilFill} from 'react-icons/bs'
 
 

@@ -1,6 +1,6 @@
 import { BarChart } from './BarChart';
 import { PieChart } from './PieChart';
-
+import './style.css'
 
 export function ChartComp({data}){
 

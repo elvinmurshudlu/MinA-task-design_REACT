@@ -1,5 +1,5 @@
 import {settings} from "../../constants/settings"
-import style from "./style.module.css"
+import "./style.css"
 import {footerMenu} from "../../constants/footer" 
 import { Link } from "react-router-dom"
 

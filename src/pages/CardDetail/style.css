@@ -1,0 +1,11 @@
+.card-stats-container {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-y: hidden;
+}
+@media (max-width: 991px) {
+  .card-stats-container {
+    overflow-y: scroll;
+  }
+}/*# sourceMappingURL=style.css.map */

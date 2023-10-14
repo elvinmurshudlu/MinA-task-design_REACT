@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import style from './style.module.css'
+import './style.css'
 import {BiDotsHorizontal} from "react-icons/bi"
 import {cards} from "../../constants/cards"
 import {Card} from "../../components/Card/Card"

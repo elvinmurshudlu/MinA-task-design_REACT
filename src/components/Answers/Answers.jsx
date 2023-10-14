@@ -10,7 +10,7 @@ export function Answer({data}){
 <div className={style['color-container'] + ' mt-1'}    >
   <table className={style['table']}>
     <thead>
-    <tr class="table-header">
+    <tr className="table-header">
       <th>Color</th>
       <th>Answers</th>
       <th>Operations</th>

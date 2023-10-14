@@ -3,6 +3,7 @@
 @import './components/SelectComponent/style.css';
 @import './components/Card/style.module.css';
 @import './components/AddCard/style.module.css';
+@import './components//Form/style.module.css';
 
 body *{
   padding: 0;

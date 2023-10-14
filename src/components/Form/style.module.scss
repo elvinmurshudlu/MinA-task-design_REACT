@@ -1,29 +1,29 @@
 @import "../../styles/colors";
 @import "../../styles/mixins";
+
 .create-container{
-height: 100%;
-  background-color: var(--form-bg);
-  @include addBorder;
+      height: 100%;
+      background-color: var(--form-bg);
+      @include addBorder;
 
 
-
-  .form{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-     row-gap: 10px;
-    height: 100%;
-
-    h6{
-      font-weight: 400;
+      form{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            height: 100%;
+                h6{
+            font-weight: 400;
     }
 
-    .label{
+
+    label{
       row-gap: 5px;
       width: 100%;
       font-size: 13px;
 
-      .input,.textarea,.select{
+      input,textarea,select{
         padding: 2px 4px;
         width: 100%;
         background-color: var(--nav-bg-color);
@@ -31,13 +31,13 @@ height: 100%;
         //@include addBorder;
         border-radius:3px;
       }
-      .textarea{
+      textarea{
         height: 70px;
         resize: none;
       }
 
       .answer{
-        .input{
+        input{
           width: 55%;
           &::placeholder{
             color:var(--font-color)
@@ -68,13 +68,15 @@ height: 100%;
       }
     }
 
-    
-  }
+      }
 
 }
 
+
+
+
 .error{
-    .input , .textarea, .select{
+    input , textarea, select{
       border: 1px solid red !important;
     }
 
@@ -89,25 +91,6 @@ height: 100%;
   width: 100%;
 
 
-}
-:host ::ng-deep .select-button{
-  width: 100% ;
-  background-color: var(--nav-bg-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2px 7px;
-  //@include addBorder;
-  border: none;
-  border-radius:3px;
-
-
-
-}
-:host ::ng-deep .dropdown-menu{
-  width: 100%;
-  background-color: var(--nav-bg-color);
-  font-size:13px;
 }
 
 

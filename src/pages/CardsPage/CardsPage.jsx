@@ -23,15 +23,15 @@ export default function  CardsPage(){
 
 
     return (
-        <div ref={container} onScroll={onScroll} className={style["main-container"]} >
-                <div className={style["card-item"]}>
+        <div ref={container} onScroll={onScroll} className="main-container" >
+                <div className="card-item">
 
                     <AddCard></AddCard>
                 </div>
                 
                 {
                     cards.slice(0,elements).map((card,index)=>(
-                         <div key={index} className={style["card-item"]}>
+                         <div key={index} className="card-item">
 
                                         <Card card={card}></Card>
                             </div>

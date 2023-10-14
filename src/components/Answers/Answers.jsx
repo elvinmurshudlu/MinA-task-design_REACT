@@ -7,8 +7,9 @@ export function Answer({data}){
     return (
         <>
 
-<div className={style['color-container'] + ' mt-1'}    >
-  <table className={style['table']}>
+
+<div className='color-container mt-1'    >
+  <table >
     <thead>
     <tr className="table-header">
       <th>Color</th>

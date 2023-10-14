@@ -3,7 +3,15 @@
 @import './components/SelectComponent/style.css';
 @import './components/Card/style.module.css';
 @import './components/AddCard/style.module.css';
-@import './components//Form/style.module.css';
+@import './components/Form/style.module.css';
+@import './components/Answers/style.module.css';
+@import './components/Chart/style.module.css';
+@import './components/Footer/style.module.css';
+@import './components/Header/style.module.css';
+@import './components/Map/style.module.css';
+@import './containers/ChartContainer/style.module.css';
+@import './pages/CardDetail/style.module.css';
+@import './pages/CardsPage/style.module.css';
 
 body *{
   padding: 0;

@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import style from './style.module.css'
+
 import {settings} from "../../constants/settings"
 import {menu} from "../../constants/menu"
 import {user} from '../../constants/user'
@@ -17,9 +17,10 @@ export default function Header({changeTheme}){
     const [isOpen ,setIsOpen] = useState(false)
 
     return (
+
             <nav>
-                <div className={style['nav-container']}>
-                    <div className={style['navbar-desktop']}>
+                <div className='nav-container'>
+                    <div className='navbar-desktop'>
                         <Link style={{display:'flex',alignItems:'center'}} to={'/'}><img src={settings.logo} />{settings.logo_title}</Link>
 
 
@@ -35,16 +36,16 @@ export default function Header({changeTheme}){
                         </ul>
 
 
-                        <div className={style['settings'] + ' d-none' + ' d-lg-flex'}>
-                            <div className={style['controls']}>
+                        <div className='settings d-none d-lg-flex'>
+                            <div className='controls'>
                                 <span className="icon-btn"><BsBellFill></BsBellFill></span>
                                 <span className="icon-btn"><BsFillChatLeftTextFill></BsFillChatLeftTextFill></span>
                                 <span onClick={changeTheme} className="icon-btn"><BsFillMoonFill></BsFillMoonFill></span>
                             </div>
 
-                            <div className={style["profile"]}>
+                            <div className="profile">
 
-                            <div className={style['profile_title'] + ' d-flex'} >
+                            <div className='profile_title d-flex' >
                                 <div>
                                     <h6>{user.name}</h6>
                                     <p>Vote:{user.vote},Survey:{user.survey}</p>
@@ -53,7 +54,7 @@ export default function Header({changeTheme}){
                                         <BsFillCaretDownFill></BsFillCaretDownFill>
                                 </span>
                                 </div>
-                                <span className={style['profile_pic']}>
+                                <span className='profile_pic'>
                                         <img src={user.img} alt=""/>
                                     </span>
                             </div>
@@ -63,17 +64,17 @@ export default function Header({changeTheme}){
                         <span onClick={()=>setIsOpen(!isOpen)} className={'d-block d-lg-none'} ><CiMenuBurger></CiMenuBurger></span>
 
                     </div>
-                    <div style={{height:isOpen ? 'max-content' :''}} className={style['navbar-mobile']}>
-                                    <div className={style['settings'] + ' d-flex' + ' justify-content-between' + ' p-2'}>
-                                        <div className={style['controls']}>
+                    <div style={{height:isOpen ? 'max-content' :''}} className='navbar-mobile'>
+                                    <div className='settings d-flex justify-content-between p-2'>
+                                        <div className='controls'>
                                             <span className="icon-btn"><BsBellFill></BsBellFill></span>
                                             <span className="icon-btn"><BsFillChatLeftTextFill></BsFillChatLeftTextFill></span>
                                             <span onClick={changeTheme} className="icon-btn"><BsFillMoonFill></BsFillMoonFill></span>
                                         </div>
 
-                                        <div className={style["profile"]}>
+                                        <div className="profile">
 
-                                        <div className={style['profile_title'] + ' d-flex'} >
+                                        <div className='profile_title d-flex' >
                                             <div>
                                                 <h6>{user.name}</h6>
                                                 <p>Vote:{user.vote},Survey:{user.survey}</p>
@@ -82,7 +83,7 @@ export default function Header({changeTheme}){
                                                     <BsFillCaretDownFill></BsFillCaretDownFill>
                                             </span>
                                             </div>
-                                            <span className={style['profile_pic']}>
+                                            <span className='profile_pic'>
                                                     <img src={user.img} alt=""/>
                                                 </span>
                                         </div>

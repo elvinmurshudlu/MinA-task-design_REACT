@@ -7,7 +7,7 @@ export function Card({card}){
     return (
        
         
-        <Link  to={'/cards/'+card.id} className="card-item d-flex" >
+        <Link  to={'/cards/'+card.id} className="card-item- d-flex" >
                <img className='img' src={card.img} alt=""/>
   <div className='content d-flex flex-column justify-content-between align-items-end' >
 

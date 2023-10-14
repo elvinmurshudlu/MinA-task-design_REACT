@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import style from "./style.module.css"
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
@@ -72,8 +71,8 @@ export function MapComponent(){
 
     return (<>
 
-          <div className={style["map-container"]} >
-                  <div className={style["map"]} ref={mapEl}></div>
+          <div className="map-container" >
+                  <div className="map" ref={mapEl}></div>
           </div>
 
     

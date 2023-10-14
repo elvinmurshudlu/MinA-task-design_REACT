@@ -30,19 +30,19 @@
   --form-bg:#282828 !important;
 }
 
-.card-item {
+.card-item- {
   position: relative;
   border: 1px solid var(--border-color);
   overflow: hidden;
   cursor: pointer;
   border-radius: 7px;
 }
-.card-item .img {
+.card-item- .img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.card-item .content {
+.card-item- .content {
   position: absolute;
   top: 0;
   left: 0;
@@ -50,32 +50,32 @@
   height: 100%;
   color: white !important;
 }
-.card-item .content .vote {
+.card-item- .content .vote {
   border-radius: 5px;
   padding: 3px 5px;
   font-size: 11px;
   background-color: var(--card-text-bg);
   color: white !important;
 }
-.card-item .content-footer {
+.card-item- .content-footer {
   width: 100%;
   background-color: var(--card-text-bg);
   border-radius: 5px;
   font-size: 10px;
   padding: 4px;
 }
-.card-item .content-footer_icons {
+.card-item- .content-footer_icons {
   width: 25%;
   padding-right: 3px;
 }
-.card-item .content-footer_text {
+.card-item- .content-footer_text {
   width: 75%;
 }
-.card-item .content-footer_title {
+.card-item- .content-footer_title {
   font-size: 1.3em;
   color: white !important;
 }
-.card-item .content-footer_subtitle {
+.card-item- .content-footer_subtitle {
   font-size: 0.9em;
   font-weight: 200;
   overflow: hidden;

@@ -5,7 +5,7 @@ import { ChartContainer } from '../../containers/ChartContainer/ChartContainer'
 export function Detail(){
     return(
         <>
-        <div className={style['card-stats-container'] + ' row'} >
+        <div className='card-stats-container row' >
 
                     <div className="col-12 col-md-8 p-2  ">
                         <MapComponent></MapComponent>

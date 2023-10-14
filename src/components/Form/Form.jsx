@@ -62,7 +62,7 @@ export function Form(){
 
       try{
         await axios.post(form_settings.enpoint,
-          {...form,['answers']:answers}
+          {...form}
         )
 
       }catch(e){
@@ -80,7 +80,7 @@ export function Form(){
     }
 
     return (
-        <>
+        
 
 <div className="create-container p-2">
   <form action="">
@@ -136,6 +136,6 @@ export function Form(){
   </form>
 </div>
 
-        </>
+        
     )
 }

@@ -1,4 +1,3 @@
-import style from './style.module.css'
 import {form_settings} from '../../constants/forms'
 import { useState,useRef } from 'react'
 import { ColorPicker } from 'primereact/colorpicker';

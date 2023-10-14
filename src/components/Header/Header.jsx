@@ -28,7 +28,7 @@ export default function Header({changeTheme}){
                         <ul className="d-none d-lg-flex">
                                 {
                                     menu.map((item,index)=>(
-                                        <li><Link key={index} to={item.path}>{item.label}</Link></li>
+                                        <li key={index}><Link  to={item.path}>{item.label}</Link></li>
                                     ))
                                 }
 
@@ -94,7 +94,7 @@ export default function Header({changeTheme}){
                                     <ul className="d-flex flex-column align-items-center gap-3">
                                             {
                                                 menu.map((item,index)=>(
-                                                    <li><Link key={index} to={item.path}>{item.label}</Link></li>
+                                                    <li key={index}><Link  to={item.path}>{item.label}</Link></li>
                                                 ))
                                             }
                         </ul>

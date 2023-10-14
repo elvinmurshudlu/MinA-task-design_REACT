@@ -1,9 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './style.css'
+import { Theme } from "../../contexts/ThemeContext";
 
 export function MapComponent(){
+  const theme = useContext(Theme)
 
     const mapEl = useRef()
 
@@ -15,7 +17,7 @@ export function MapComponent(){
       try {
         const  map = new mapboxgl.Map({
           container: mapEl.current,
-          style: `mapbox://styles/mapbox/dark-v11` ,
+          style: `mapbox://styles/mapbox/${theme.theme ? 'dark':'light'}-v11` ,
   
           center: [28.9784, 41.0082],
           zoom: 8.5
@@ -67,7 +69,7 @@ export function MapComponent(){
 
         
 
-    },[])
+    },[theme])
 
 
     return (<>

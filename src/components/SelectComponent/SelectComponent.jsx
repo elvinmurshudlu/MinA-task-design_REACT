@@ -16,7 +16,7 @@ export function SelectComp({initialText='Option List',data,onSelect,isSubmit}){
             <div className="options-wrapper" style={{height:isOpen ?'max-content' :'0'}}>
                 {
                     data.data.map((option,index)=>(
-                        <div className="option" onClick={()=>{
+                        <div key={index} className="option" onClick={()=>{
                             setSelectedItem(option.label)
                             setIsOpen(false)
                             

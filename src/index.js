@@ -18,6 +18,7 @@ import CardsPage from "./pages/CardsPage/CardsPage";
 import { NewCard } from './pages/NewCard/NewCard';
 import { PrimeReactProvider } from 'primereact/api';
 import { Detail } from './pages/CardDetail/Detail';
+import { ThemeContext } from './contexts/ThemeContext';
 
 //theme
 
@@ -49,10 +50,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <PrimeReactProvider>
-
     
-    <RouterProvider router={routes}>
-    </RouterProvider>
+    <ThemeContext>
+        <RouterProvider router={routes}>
+        </RouterProvider>
+    </ThemeContext>
+     
     </PrimeReactProvider>
   </React.StrictMode>
 );

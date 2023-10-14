@@ -1,9 +1,0 @@
-@import "../../styles/colors";
-@import "../../styles/mixins";
-
-
-.chart{
-  padding: 5px;
-  @include addBorder;
-  background-color: var(--footer-bg-color);
-}

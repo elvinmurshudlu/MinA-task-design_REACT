@@ -8,7 +8,7 @@ export default function Footer(){
 
         <footer className='footer flex-column flex-md-row'  >
         <p>Mail: {settings.mail}</p>
-        <ul class="d-flex gap-3 flex-column flex-md-row">
+        <ul className="d-flex gap-3 flex-column flex-md-row">
 
             {
                 footerMenu.map((menu,index)=>(
@@ -18,7 +18,7 @@ export default function Footer(){
 
             
         </ul>
-        <p class="text-end">{settings.copyright}</p>
+        <p className="text-end">{settings.copyright}</p>
 </footer>
 
     )

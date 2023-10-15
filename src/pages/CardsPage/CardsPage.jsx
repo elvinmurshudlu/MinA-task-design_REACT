@@ -15,15 +15,18 @@ export default function  CardsPage(){
 
         const element = container.current
 
+
         if(element.clientHeight + Math.ceil(element.scrollTop)  +2>= element.scrollHeight  ){
             SetElements(element=>element+=5)
         }
 
     }
+    
+
 
 
     return (
-        <div ref={container} onScroll={onScroll} className="main-container" >
+        <div ref={container} onWheel={onScroll} className="main-container" >
                 <div className="card-item">
 
                     <AddCard></AddCard>

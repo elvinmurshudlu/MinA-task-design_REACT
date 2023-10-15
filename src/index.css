@@ -12,25 +12,25 @@ body *{
 
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 6px !important;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
- background: var(--footer-bg-color);
+ background: var(--footer-bg-color) !important;
 
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
- background: var(--nav-bg-color);
+ background: var(--nav-bg-color) !important;
 
 
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
- background: #555;
+ background: #555 !important;
 }
 
 

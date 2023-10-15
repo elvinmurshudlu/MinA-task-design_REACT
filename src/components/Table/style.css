@@ -36,6 +36,6 @@
   font-weight: 100;
 }
 
-::-webkit-scrollbar {
+.tabulator::-webkit-scrollbar {
   display: none;
 }/*# sourceMappingURL=style.css.map */
